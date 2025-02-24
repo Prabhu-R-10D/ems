@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="#">Employee Management System</a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/addemp" routerLinkActive="active">Add</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/updateemp" routerLinkActive="active">Update</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/listemp" routerLinkActive="active">List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/deleteemp" routerLinkActive="active">Delete</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/searchemp" routerLinkActive="active">Search</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/pagination" routerLinkActive="active">Pagination</a>
+      </li>  
+      
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost:8080/swagger-ui/index.html">Swagger</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost:5601">ELK</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container" style="margin-top: 80px;">
+  <div class="row">
+    <div class="col-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

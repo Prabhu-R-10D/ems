@@ -1,0 +1,32 @@
+<div class="container mt-4">
+    <h2>Employee List</h2>
+    <div class="row">
+      <div *ngFor="let employee of employees" class="col-md-4 mb-3">
+        <div class="card">
+          <img src="image.jpeg" width="200" height="150" class="card-img-top" alt="Employee Image">
+          <div class="card-body">
+            <h5 class="card-title">{{ employee.name }}</h5>
+            <p class="card-text">
+              <strong>ID:</strong> {{ employee.empid }}<br>
+              <strong>Department:</strong> {{ employee.dept }}<br>
+              <strong>Email: </strong>{{employee.email}}<br>
+            <strong>DOB: </strong>{{employee.dob}}<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-12 mt-4">
+        <label for="pageInput">Page Number:</label>
+        <input id="pageInput" type="number" min=0 max=9999 [(ngModel)]="currentPage" (change)="loadEmployees()" class="form-control mb-2" min="1">
+  
+        <label for="sizeInput">Page Size:</label>
+        <input id="sizeInput" type="number" min=0 max=9999 [(ngModel)]="pageSize" (change)="onPageSizeChange(pageSize)" class="form-control mb-2" min="1">
+  
+        
+      </div>
+    </div>
+  </div>
+  
